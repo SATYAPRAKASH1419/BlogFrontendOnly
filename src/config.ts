@@ -1,0 +1,1 @@
+export const BACKEND_URL="https://backend.satyaprakashswain37017.workers.dev"
