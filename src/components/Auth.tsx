@@ -84,18 +84,14 @@ interface LabeledInputType {
   placeholder: string;
   inputtype:string;
   onChange: (e: ChangeEvent<HTMLInputElement>) => void;
+  type?:string
 }
 
-function LabeledInput({ label, placeholder, inputtype,onChange }: LabeledInputType) {
+function LabeledInput({ label, placeholder, onChange,type }: LabeledInputType) {
   return (
     <div className="pt-4">
       <div className="text-xl font-semibold">{label}</div>
-      <input
-        type={inputtype}
-        placeholder={placeholder}
-        className="border-[0.5px] border-zinc-400 mt-2 rounded-sm w-full h-10 pl-2"
-        onChange={onChange}
-      />
+      <input onChange={onChange} type={type || "text"} id="first_name" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder={placeholder} required />
     </div>
-  );
+  )
 }
