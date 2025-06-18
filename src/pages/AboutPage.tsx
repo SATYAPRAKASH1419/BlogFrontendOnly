@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { Appbar } from '../components/Appbar';
 
 // Main App component for the About Us page
